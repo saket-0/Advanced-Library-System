@@ -1,0 +1,72 @@
+=== LIBRARY DATASET ANALYSIS REPORT ===
+Generated on: 2025-12-02 18:00:32.972834
+Total Records Scanned: 265606
+Corrupt JSON Lines: 0
+Records missing Title (245): 0
+
+--- FIELD COVERAGE (Top 15) ---
+(How many records actually have this data?)
+id (id): 265606 (100.00%)
+scraped_at (scraped_at): 265606 (100.00%)
+999 (999): 265606 (100.00%)
+245 (Title): 265605 (100.00%)
+942 (Koha Item Type): 265604 (100.00%)
+260 (Publication Info): 251491 (94.69%)
+952 (Holdings/Barcode (Crucial)): 243055 (91.51%)
+100 (Author): 242109 (91.15%)
+300 (Physical Desc): 240256 (90.46%)
+082 (082): 206162 (77.62%)
+250 (250): 65164 (24.53%)
+650 (Subject): 15721 (5.92%)
+500 (500): 13612 (5.12%)
+020 (ISBN): 10928 (4.11%)
+856 (856): 9792 (3.69%)
+
+--- ITEM TYPES (942) ---
+(Useful for categorizing Books, Journals, etc.)
+BK: 228320
+CD: 13612
+EB: 8763
+AB: 8353
+DC: 4999
+TR: 913
+REF: 444
+TH: 119
+BK ddc: 66
+BK ddc ddc: 5
+REF ddc: 3
+Missing: 2
+BK ddc ddc ddc: 2
+REF ddc ddc: 2
+BK ddc ddc ddc ddc: 1
+ddc: 1
+BK BK BK ddc ddc ddc: 1
+
+--- HOLDINGS STRUCTURE (952) ---
+(Crucial for inventory. If inconsistent, we need a complex parser.)
+String with 28 segments: 44451
+String with 27 segments: 37191
+String with 26 segments: 33440
+String with 29 segments: 30010
+String with 25 segments: 24261
+Missing: 22551
+String with 30 segments: 22075
+String with 24 segments: 12807
+String with 15 segments: 11000
+String with 23 segments: 9223
+
+--- PUBLICATION DECADES ---
+1900s: 13
+1910s: 11
+1920s: 19
+1930s: 72
+1940s: 191
+1950s: 736
+1960s: 2167
+1970s: 3942
+1980s: 17483
+1990s: 37844
+2000s: 139415
+2010s: 36202
+2020s: 6
+Year Not Found: 27505
