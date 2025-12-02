@@ -7,16 +7,25 @@ def init_db():
     c.execute("PRAGMA foreign_keys = ON;")
     
     # 1. BIBLIO MASTER
+    # Added 'raw_json_dump' at the end
     c.execute("""
         CREATE TABLE IF NOT EXISTS biblio_master (
             biblio_id INTEGER PRIMARY KEY,
-            title TEXT, author TEXT, edition TEXT, isbn TEXT,
-            pub_place TEXT, pub_publisher TEXT, pub_year INTEGER,
-            page_count INTEGER, language TEXT, item_type TEXT
+            title TEXT, 
+            author TEXT, 
+            edition TEXT, 
+            isbn TEXT,
+            pub_place TEXT, 
+            pub_publisher TEXT, 
+            pub_year INTEGER,
+            page_count INTEGER, 
+            language TEXT, 
+            item_type TEXT,
+            raw_json_dump TEXT  -- HERE IS YOUR REFERENCE COLUMN
         );
     """)
 
-    # 2. PHYSICAL ITEMS (Enhanced)
+    # 2. PHYSICAL ITEMS
     c.execute("""
         CREATE TABLE IF NOT EXISTS physical_items (
             item_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -25,8 +34,8 @@ def init_db():
             call_number TEXT,
             shelving_location TEXT,
             library_code TEXT,
-            vendor TEXT,          -- Captured Intelligent Vendor
-            bill_number TEXT,     -- Captured Intelligent Bill No
+            vendor TEXT,
+            bill_number TEXT,
             price REAL,
             currency TEXT,
             bill_date DATE,
